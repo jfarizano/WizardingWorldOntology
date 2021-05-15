@@ -25,6 +25,7 @@
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#dirige -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#dirige">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esDirigidaPor"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Escuela"/>
@@ -35,6 +36,7 @@
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#enseña -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#enseña">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esEnseñadaPor"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Clase"/>
     </owl:ObjectProperty>
@@ -48,6 +50,49 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Casa"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Escuela"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esDirigidaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esDirigidaPor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Escuela"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esEnseñadaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esEnseñadaPor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Clase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esEstudiadaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esEstudiadaPor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#estudia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Clase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esFundadaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esFundadaPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#lePertenece"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esFundador"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Casa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Mago/Bruja"/>
     </owl:ObjectProperty>
     
 
@@ -67,6 +112,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esJefeDe">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#perteneceA"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#tieneJefe"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Casa"/>
@@ -78,6 +124,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esPrefectoDe">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#perteneceA"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#tienePrefecto"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Casa"/>
@@ -104,6 +151,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#integradoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#integradoPor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#juegaPara"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#EquipoDeQuidditch"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#juegaPara -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#juegaPara">
@@ -111,6 +169,26 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#EquipoDeQuidditch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#lePertenece -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#lePertenece">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#perteneceA"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Casa"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#EquipoDeQuidditch"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -138,6 +216,31 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#tieneCasa">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#tieneJefe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#tieneJefe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#lePertenece"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Casa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#tienePrefecto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#tienePrefecto">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#lePertenece"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Casa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
     </owl:ObjectProperty>
     
 
@@ -325,6 +428,70 @@
     
 
 
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#AlbusDumbledore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#AlbusDumbledore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
+        <dirige rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hogwarts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#ArgusFilch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#ArgusFilch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Squib"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Beauxbatons -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Beauxbatons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Escuela"/>
+        <Ubicación rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Francia</Ubicación>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#CedricDiggory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#CedricDiggory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
+        <perteneceA rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hufflepuf"/>
+        <Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</Edad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#DracoMalfoy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#DracoMalfoy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
+        <perteneceA rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Slytherin"/>
+        <Año rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Año>
+        <Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</Edad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#DudleyDursley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#DudleyDursley">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Muggle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Durmstrang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Durmstrang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Escuela"/>
+        <Ubicación rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NorteEuropa</Ubicación>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor">
@@ -337,6 +504,17 @@
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HarryPotter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HarryPotter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
+        <perteneceA rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor"/>
+        <Año rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Año>
+        <Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</Edad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HermioneGranger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HermioneGranger">
         <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
         <perteneceA rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor"/>
         <Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</Edad>
@@ -361,6 +539,23 @@
     
 
 
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#LunaLovegood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#LunaLovegood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
+        <perteneceA rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Ravenclaw"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#PetuniaDursley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#PetuniaDursley">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Muggle"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Ravenclaw -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Ravenclaw">
@@ -370,11 +565,39 @@
     
 
 
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#RonWeasley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#RonWeasley">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
+        <perteneceA rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor"/>
+        <Año rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Año>
+        <Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</Edad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#SeverusSnape -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#SeverusSnape">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
+        <esJefeDe rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Slytherin"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Slytherin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Slytherin">
         <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Casa"/>
         <esCasaDe rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hogwarts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#VernonDursley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#VernonDursley">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Muggle"/>
     </owl:NamedIndividual>
     
 
