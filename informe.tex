@@ -1,0 +1,139 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper, margin=1.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage[spanish]{layout}
+\usepackage[article]{ragged2e}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{proof}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\setlength{\parindent}{0pt}
+
+\title{
+    Ontología del Mundo Mágico de Harry Potter}
+\author{Mellino, Natalia \and Farizano, Juan Ignacio}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent\rule{\textwidth}{1pt}
+
+\section{Descripción}
+
+\-\ Nos interesa estudiar las diferentes escuelas del mundo mágico de Harry Potter.
+Cada escuela puede estar divida en 4 casas o en ninguna, donde los alumnos serán 
+repartidas en ellas. Cada casa tiene un jefe y dos prefectos, un hombre y una 
+mujer. Un jefe es siempre un profesor de la escuela, mientras que los roles de 
+prefectos los ocupan dos estudiantes de esa misma casa que estén cursando desde 
+quinto año en adelante.
+
+\-\ Los personajes en este mundo mágico las podemos categorizar según el nivel de 
+magia que posean: Magos o Brujas, Squibs o Muggles. Los Magos o Brujas son 
+aquellos que poseen magia, los Squibs son los que no tienen magia pero provienen 
+de padres magos mientras que los Muggles no poseen nada de magia. En este mundo, 
+sólo los Magos o Brujas pueden ser alumnos o profesores de una escuela.
+
+\-\ En una escuela los estudiantes deben atender a clases que se dictan durante todo 
+el año. Las clases van variando a medida que van avanzando de año. Un alumno se 
+gradua al finalizar séptimo año.
+Durante el año, los alumnos tiene diferentes actividades recreativas, siendo las 
+más importantes:
+    \begin{itemize}
+        \item La Copa de las Casas que es un galardón otorgado al final de cada 
+        año a la casa que reunió más puntos durante el transcurso del año 
+        mediante diferentes actividades.
+        \item La principal disciplina es el famoso deporte mágico Quidditch, 
+        cada casa tiene su propio equipo, el cual esta conformado por siete 
+        jugadores y tiene un capitán que puede ser cualquiera de los integrantes 
+        del equipo. En este deporte, compiten en un campeonato las casas de las 
+        escuelas entre sí. 
+    \end{itemize}
+
+\section{Modelado de la ontología}
+
+\subsection{Jerarquía de clases}
+
+fari fix this :(
+
+\begin{itemize}
+    \item Escuela
+    \item Casa
+    \item Persona
+          \begin{itemize}
+              \item Mago/Bruja
+                    \begin{itemize}
+                      \item Alumno Docente 
+                    \end{itemize}
+              \item Squib
+              \item Muggle
+          \end{itemize}
+    \item Clase
+    \item Equipo de Quidditch
+\end{itemize}
+
+\subsection{Propiedades de cada clase}
+
+\begin{itemize}
+    \item Escuela
+          \begin{itemize}
+              \item Nombre
+              \item Ubicación
+              \item Año de fundación
+              \item Lema 
+          \end{itemize}
+    \item Casa
+          \begin{itemize}
+              \item Nombre
+              \item Cantidad de Copas de las Casas ganadas 
+          \end{itemize}
+    \item Persona
+          \begin{itemize}
+              \item Nombre 
+              \item Edad
+          \end{itemize}
+    \item Clase
+          \begin{itemize}
+              \item Nombre
+              \item Año 
+          \end{itemize}
+    \item Equipo de Quidditch
+          \begin{itemize}
+              \item Número de campeonatos ganados 
+          \end{itemize}
+\end{itemize}
+
+\subsection{Relaciones}
+
+\begin{itemize}
+    \item Alumno \emph{estudiaEn} Escuela
+    \item Persona \emph{trabajaEn} Escuela
+    \item Alumno \emph{perteneceA} Casa
+    \item Alumno \emph{estudia} Clase
+    \item Docente \emph{enseña} Clase
+    \item Equipo de Quidditch \emph{perteneceA} Casa
+    \item Alumno \emph{juegaPara} Equipo de Quidditch
+    \item Docente \emph{Dirige} Escuela
+    \item Alumno \emph{esPrefectoDe} Casa
+    \item Mago/Bruja \emph{esFundadorDe} Casa
+    \item Casa \emph{esCasaDe} Escuela 
+\end{itemize}
+
+En Protégé se han realizado también las \textbf{relaciones inversas} para la
+mayoría de las relaciones presentadas en este informe.
+
+\section{Queries}
+
+aca pondria mis queries SI TUVIERA UNAAAAAAAAAAAAAAAAAAAA
+
+\section{Conclusión}
+
+la conclusion es que no hay conclusion xd
+
+\end{document}
