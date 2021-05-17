@@ -904,11 +904,13 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HermioneGranger"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hogwarts"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hufflepuf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#IgorKarkarov"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#KatieBell"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#LunaLovegood"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#MinervaMcGonagall"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#NevilleLongbottom"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#OliverWood"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#OlympeMaxime"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#PercyWeasley"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#PetuniaDursley"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Pociones"/>
