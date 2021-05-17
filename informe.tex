@@ -56,84 +56,47 @@ más importantes:
         escuelas entre sí. 
     \end{itemize}
 
+\textbf{Observación:} el razonador elegido para probar la ontología es \emph{Pellet}.
+    
+\newpage
+
 \section{Modelado de la ontología}
 
-\subsection{Jerarquía de clases}
+\begin{figure}[h!]
+    \begin{center}
+      \includegraphics[width=\linewidth]{harrypotter.png}
+    \end{center}
+  \end{figure}
 
-fari fix this :(
-
-\begin{itemize}
-    \item Escuela
-    \item Casa
-    \item Persona
-          \begin{itemize}
-              \item Mago/Bruja
-                    \begin{itemize}
-                      \item Alumno Docente 
-                    \end{itemize}
-              \item Squib
-              \item Muggle
-          \end{itemize}
-    \item Clase
-    \item Equipo de Quidditch
-\end{itemize}
-
-\subsection{Propiedades de cada clase}
-
-\begin{itemize}
-    \item Escuela
-          \begin{itemize}
-              \item Nombre
-              \item Ubicación
-              \item Año de fundación
-              \item Lema 
-          \end{itemize}
-    \item Casa
-          \begin{itemize}
-              \item Nombre
-              \item Cantidad de Copas de las Casas ganadas 
-          \end{itemize}
-    \item Persona
-          \begin{itemize}
-              \item Nombre 
-              \item Edad
-          \end{itemize}
-    \item Clase
-          \begin{itemize}
-              \item Nombre
-              \item Año 
-          \end{itemize}
-    \item Equipo de Quidditch
-          \begin{itemize}
-              \item Número de campeonatos ganados 
-          \end{itemize}
-\end{itemize}
-
-\subsection{Relaciones}
-
-\begin{itemize}
-    \item Alumno \emph{estudiaEn} Escuela
-    \item Persona \emph{trabajaEn} Escuela
-    \item Alumno \emph{perteneceA} Casa
-    \item Alumno \emph{estudia} Clase
-    \item Docente \emph{enseña} Clase
-    \item Equipo de Quidditch \emph{perteneceA} Casa
-    \item Alumno \emph{juegaPara} Equipo de Quidditch
-    \item Docente \emph{Dirige} Escuela
-    \item Alumno \emph{esPrefectoDe} Casa
-    \item Mago/Bruja \emph{esFundadorDe} Casa
-    \item Casa \emph{esCasaDe} Escuela 
-\end{itemize}
-
-En Protégé se han realizado también las \textbf{relaciones inversas} para la
-mayoría de las relaciones presentadas en este informe.
+En rojo se pueden ver las distintas relaciones entre las clases. En Protégé se 
+han realizado también las \textbf{relaciones inversas} para la mayoría de las 
+relaciones presentadas.
 
 \section{Queries}
 
-aca pondria mis queries SI TUVIERA UNAAAAAAAAAAAAAAAAAAAA
+Las queries elegidas para probar nuestra ontología fueron las siguientes:
 
-\section{Conclusión}
+\begin{itemize}
+    \item \texttt{Casa and lePertenece some (EquipoDeQuidditch and CampeonatosGanados value 5)}
+    \item \texttt{Alumno and estudia value Pociones and perteneceA value Gryffindor}
+\end{itemize}
 
-la conclusion es que no hay conclusion xd
+\section{Conclusiones}
+
+\begin{itemize}
+    \item En general no se presentaron dificultades con el modelado de las clases
+          y las relaciones, ya que el tópico de la ontología nos resulta bastante
+          familiar y es de nuestro agrado.
+    \item Nuestra mayor dificultad se nos presentó al momento de querer componer
+          relaciones, por ejemplo si un alumno pertence a una casa determinada 
+          entonces nosotros podemos deducir que ese alumno estudia en la escuela 
+          de esa casa. Pero el razonador no podía inferir eso sin tener la
+          composición de las relaciones \emph{perteneceA} y \emph{esCasaDe}. 
+          Finalmente, pudimos lograr resolver el inconveniente y lograr el 
+          resultado deseado.
+    \item Una cosa que no pudimos resolver es hacer que el razonador infiera que
+          si un alumno \emph{juegaPara} el Equipo Deportivo de una Casa, entonces
+          el alumno \emph{perteneceA} esa casa. 
+\end{itemize}
 
 \end{document}
