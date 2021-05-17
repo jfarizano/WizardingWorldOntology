@@ -56,6 +56,21 @@
     
 
 
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esCompañero -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esCompañero">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#estudia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esEstudiadaPor"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esDirigidaPor -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#esDirigidaPor">
@@ -188,7 +203,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#EquipoDeQuidditch"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#EquipoDeportivo"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -206,7 +221,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#EquipoDeQuidditch"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#EquipoDeportivo"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -502,6 +517,7 @@
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Beauxbatons -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Beauxbatons">
+        <AñoFundación rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1290</AñoFundación>
         <Ubicación rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Francia</Ubicación>
     </owl:NamedIndividual>
     
@@ -519,7 +535,10 @@
 
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#CuidadoDeCriaturasMágicas -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#CuidadoDeCriaturasMágicas"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#CuidadoDeCriaturasMágicas">
+        <esEstudiadaPor rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HermioneGranger"/>
+        <Año rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</Año>
+    </owl:NamedIndividual>
     
 
 
@@ -527,6 +546,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#DracoMalfoy">
         <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Alumno"/>
+        <estudia rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Pociones"/>
         <perteneceA rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Slytherin"/>
         <Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</Edad>
     </owl:NamedIndividual>
@@ -545,7 +565,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Durmstrang">
         <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Escuela"/>
-        <Ubicación rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NorteEuropa</Ubicación>
+        <esDirigidaPor rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#IgorKarkarov"/>
+        <Ubicación rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NorteEscandinavia</Ubicación>
     </owl:NamedIndividual>
     
 
@@ -558,7 +579,16 @@
         <integradoPor rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HarryPotter"/>
         <integradoPor rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#OliverWood"/>
         <perteneceA rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor"/>
-        <CampeonatosGanados rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</CampeonatosGanados>
+        <CampeonatosGanados rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</CampeonatosGanados>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#FiliusFiltwick -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#FiliusFiltwick">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
+        <esJefeDe rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Ravenclaw"/>
     </owl:NamedIndividual>
     
 
@@ -585,11 +615,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#GodricGryffindor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#GodricGryffindor">
+        <esFundador rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor">
         <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Casa"/>
         <esCasaDe rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hogwarts"/>
+        <CopasDeLasCasasGanadas rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">27</CopasDeLasCasasGanadas>
     </owl:NamedIndividual>
     
 
@@ -614,6 +653,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HelgaHufflepuff -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HelgaHufflepuff"/>
+    
+
+
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HermioneGranger -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HermioneGranger">
@@ -626,16 +671,26 @@
 
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hogwarts -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hogwarts"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hogwarts">
+        <AñoFundación rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">987</AñoFundación>
+        <Lema rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Draco dormiens nunquam titilándus</Lema>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hufflepuf -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hufflepuf">
-        <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Casa"/>
         <esCasaDe rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hogwarts"/>
+        <esFundadaPor rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HelgaHufflepuff"/>
+        <CopasDeLasCasasGanadas rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</CopasDeLasCasasGanadas>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#IgorKarkarov -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#IgorKarkarov"/>
     
 
 
@@ -661,7 +716,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#MinervaMcGonagall">
         <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Docente"/>
-        <enseña rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Transfiguración"/>
+        <enseña rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Transformaciones"/>
         <esJefeDe rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor"/>
     </owl:NamedIndividual>
     
@@ -687,6 +742,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#OlympeMaxime -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#OlympeMaxime">
+        <dirige rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Beauxbatons"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#PercyWeasley -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#PercyWeasley">
@@ -708,6 +771,15 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Pociones">
         <esEnseñadaPor rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#SeverusSnape"/>
         <esEstudiadaPor rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HarryPotter"/>
+        <Año rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</Año>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#PomonaSprout -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#PomonaSprout">
+        <esJefeDe rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hufflepuf"/>
     </owl:NamedIndividual>
     
 
@@ -717,6 +789,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Ravenclaw">
         <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Casa"/>
         <esCasaDe rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hogwarts"/>
+        <esFundadaPor rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#RowenaRavenclaw"/>
+        <CopasDeLasCasasGanadas rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</CopasDeLasCasasGanadas>
     </owl:NamedIndividual>
     
 
@@ -728,6 +802,20 @@
         <juegaPara rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#EquipoGryffindor"/>
         <perteneceA rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor"/>
         <Edad rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</Edad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#RowenaRavenclaw -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#RowenaRavenclaw"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#SalazarSlytherin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#SalazarSlytherin">
+        <esFundador rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Slytherin"/>
     </owl:NamedIndividual>
     
 
@@ -744,14 +832,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Slytherin">
         <esCasaDe rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hogwarts"/>
+        <CopasDeLasCasasGanadas rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</CopasDeLasCasasGanadas>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Transfiguración -->
+    <!-- http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Transformaciones -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Transfiguración">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Transformaciones">
         <rdf:type rdf:resource="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Clase"/>
+        <Año rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</Año>
     </owl:NamedIndividual>
     
 
@@ -789,6 +879,49 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Squib"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Mago/Bruja"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#AlbusDumbledore"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#AngelinaJohnson"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#ArgusFilch"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Beauxbatons"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#CedricDiggory"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#CuidadoDeCriaturasMágicas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#DracoMalfoy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#DudleyDursley"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Durmstrang"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#EquipoGryffindor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#FiliusFiltwick"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#FredWeasley"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#GeorgeWeasley"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#GodricGryffindor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Gryffindor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hagrid"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HarryPotter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HelgaHufflepuff"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#HermioneGranger"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hogwarts"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Hufflepuf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#KatieBell"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#LunaLovegood"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#MinervaMcGonagall"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#NevilleLongbottom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#OliverWood"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#PercyWeasley"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#PetuniaDursley"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Pociones"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#PomonaSprout"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Ravenclaw"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#RonWeasley"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#RowenaRavenclaw"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#SalazarSlytherin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#SeverusSnape"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Slytherin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#Transformaciones"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fari/ontologies/2021/4/untitled-ontology-9#VernonDursley"/>
+        </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
 
